@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G.T.D NPC Batch Lab | Ara 3D Gen</title>
+  <meta name="description" content="Generate reproducible batches of unique animated characters and download a ZIP of GLBs." />
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">ARA 3D GEN / G.T.D EXPERIMENT</p>
+        <h1>NPC Batch Laboratory</h1>
+        <p class="lede">Generate distinct, rigged pedestrians directly in your browser. Export every character as an animated GLB in one ZIP.</p>
+      </div>
+      <nav aria-label="Tools">
+        <a href="/app/">Single character editor ↗</a>
+        <a href="/">Ara home ↗</a>
+      </nav>
+    </header>
+    <section class="layout">
+      <div class="panel">
+        <h2>Generation settings</h2>
+        <div class="fields">
+          <label>Characters <input id="count" type="number" min="1" max="50" step="1" value="10" /></label>
+          <label>Base random seed <input id="seed" type="number" min="0" max="999999999" step="1" value="42027" /></label>
+          <label>Geometry detail
+            <select id="detail"><option value="low" selected>Low — preferred for G.T.D</option><option value="medium">Medium</option><option value="high">High — large exports</option></select>
+          </label>
+          <label>Skeleton
+            <select id="rig"><option value="game_lite" selected>Game lite — 25 bones</option><option value="game">Game — 65 bones</option></select>
+          </label>
+        </div>
+        <fieldset>
+          <legend>Embedded animations</legend>
+          <label class="check"><input id="clip-idle" type="checkbox" value="idle" checked /> Idle</label>
+          <label class="check"><input id="clip-walk" type="checkbox" value="walk" checked /> Walk</label>
+          <label class="check"><input id="clip-run" type="checkbox" value="run" checked /> Run</label>
+        </fieldset>
+        <div class="actions">
+          <button id="generate" class="primary">Generate batch</button>
+          <button id="cancel" disabled>Stop after current</button>
+        </div>
+        <p class="note">A single browser worker generates characters sequentially. No character data is sent to a generation server. The 1 MB GLB threshold is a target, not a guaranteed export size.</p>
+      </div>
+      <div class="panel results">
+        <div class="result-heading"><h2>Batch progress</h2><span class="pill">Experimental</span></div>
+        <p id="status" role="status" aria-live="polite">Ready to generate.</p>
+        <progress id="progress" value="0" max="10" aria-label="Characters completed"></progress>
+        <p id="summary">0 characters</p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>#</th><th>GLB</th><th>Seed</th><th>Triangles</th><th>Size</th><th>Budget</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+        <div class="archive">
+          <div><strong>Export archive</strong><p id="zip-status">No archive yet</p></div>
+          <button id="download" class="primary" disabled>Download ZIP ↓</button>
+        </div>
+      </div>
+    </section>
+    <footer>G.T.D Batch Lab 001 · Fork-only experiment · Source GLBs require validation before game integration.</footer>
+  </main>
+  <script type="module" src="/src/batch/main.ts"></script>
+</body>
+</html>

@@ -120,6 +120,6 @@ async function fetchMocap() {
 
 fetchMakeHumanData();
 await fetchSystemAssets();
-await fetchMocap();
+if (!process.argv.includes('--skip-mocap')) await fetchMocap();
 log('building public/assets…');
 await import('./build-assets');
