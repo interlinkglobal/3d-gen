@@ -1,0 +1,1911 @@
+{
+  "schema": "gtd.meridia.character-bible.v1",
+  "city": "Meridia",
+  "creativeDirection": "Contemporary South African metropolis, inspired by Johannesburg, Pretoria, Cape Town and Durban",
+  "purpose": "Reusable character identity across districts; generator renders approximations where exact wardrobe props are not available",
+  "existingCharacters": "GTD_NPC_001–010 (unchanged)",
+  "newCharacters": "GTD_NPC_011–100",
+  "generationPolicy": {
+    "batchSize": 10,
+    "categoryBatches": 9,
+    "seedFormula": "(42027 + (npcNumericId - 1) * 7919) % 1000000000",
+    "animations": [
+      "idle",
+      "walk",
+      "run"
+    ],
+    "requireManualOptimization": true
+  },
+  "categories": [
+    {
+      "index": 0,
+      "name": "Everyday Residents",
+      "description": "Everyday urban life across South African neighborhoods",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ],
+      "count": 10
+    },
+    {
+      "index": 1,
+      "name": "Office Professionals",
+      "description": "Working lives from municipal offices to corporate towers",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ],
+      "count": 10
+    },
+    {
+      "index": 2,
+      "name": "Students and Young Adults",
+      "description": "Emerging talents and independent urban youth",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ],
+      "count": 10
+    },
+    {
+      "index": 3,
+      "name": "Trades and Essential Workers",
+      "description": "Practical skill and essential work without caricature",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ],
+      "count": 10
+    },
+    {
+      "index": 4,
+      "name": "Affluent Residents",
+      "description": "Affluence shown through restraint, not identical luxury costumes",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ],
+      "count": 10
+    },
+    {
+      "index": 5,
+      "name": "Street Personalities",
+      "description": "Recognizable local regulars and independent livelihoods",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ],
+      "count": 10
+    },
+    {
+      "index": 6,
+      "name": "Older Residents",
+      "description": "Older people with distinct routines and modern identities",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ],
+      "count": 10
+    },
+    {
+      "index": 7,
+      "name": "Fitness and Sports Enthusiasts",
+      "description": "Different sports, body types and activity levels",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ],
+      "count": 10
+    },
+    {
+      "index": 8,
+      "name": "Public-Service and Community Workers",
+      "description": "Civic services and neighborhood care",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ],
+      "count": 10
+    }
+  ],
+  "characters": [
+    {
+      "id": "GTD_NPC_011",
+      "category": "Everyday Residents",
+      "categoryIndex": 0,
+      "label": "The Early Commuter",
+      "age": 38,
+      "presentation": "M",
+      "build": "sturdy",
+      "hair": "short02",
+      "wardrobe": "casual",
+      "primary": "#253b59",
+      "secondary": "#b5a68b",
+      "signature": "One jacket sleeve rolled higher",
+      "activity": "Walks to transport before the office rush",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_012",
+      "category": "Everyday Residents",
+      "categoryIndex": 0,
+      "label": "The Weekend Shopper",
+      "age": 31,
+      "presentation": "F",
+      "build": "curvy",
+      "hair": "braid01",
+      "wardrobe": "casual",
+      "primary": "#b76548",
+      "secondary": "#e3c3a0",
+      "signature": "Bright woven shopping tote",
+      "activity": "Browses local stalls after breakfast",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_013",
+      "category": "Everyday Residents",
+      "categoryIndex": 0,
+      "label": "The Quiet Reader",
+      "age": 47,
+      "presentation": "F",
+      "build": "slender",
+      "hair": "bob02",
+      "wardrobe": "smart",
+      "primary": "#547b72",
+      "secondary": "#d4c9b4",
+      "signature": "Round spectacles and a bookmarked novel",
+      "activity": "Visits a library on lunch breaks",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_014",
+      "category": "Everyday Residents",
+      "categoryIndex": 0,
+      "label": "The Garden Enthusiast",
+      "age": 59,
+      "presentation": "M",
+      "build": "stocky",
+      "hair": "short04",
+      "wardrobe": "outdoors",
+      "primary": "#567a46",
+      "secondary": "#c1a47a",
+      "signature": "Sun-faded gardening hat",
+      "activity": "Carries seedlings home",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_015",
+      "category": "Everyday Residents",
+      "categoryIndex": 0,
+      "label": "The Football Supporter",
+      "age": 26,
+      "presentation": "M",
+      "build": "athletic",
+      "hair": "buzz",
+      "wardrobe": "sport",
+      "primary": "#e5b43c",
+      "secondary": "#224f73",
+      "signature": "Scarf in local team colors",
+      "activity": "Meets friends before a match",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_016",
+      "category": "Everyday Residents",
+      "categoryIndex": 0,
+      "label": "The Night-Shift Neighbor",
+      "age": 44,
+      "presentation": "F",
+      "build": "sturdy",
+      "hair": "ponytail01",
+      "wardrobe": "work",
+      "primary": "#33465a",
+      "secondary": "#7b95a8",
+      "signature": "Small flask clipped to a bag",
+      "activity": "Returns from an overnight shift",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_017",
+      "category": "Everyday Residents",
+      "categoryIndex": 0,
+      "label": "The Sunday Dresser",
+      "age": 62,
+      "presentation": "F",
+      "build": "curvy",
+      "hair": "afro01",
+      "wardrobe": "traditional",
+      "primary": "#7b3c76",
+      "secondary": "#d3a24c",
+      "signature": "Coordinated patterned scarf",
+      "activity": "Visits family after Sunday service",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_018",
+      "category": "Everyday Residents",
+      "categoryIndex": 0,
+      "label": "The Creative Parent",
+      "age": 36,
+      "presentation": "M",
+      "build": "average",
+      "hair": "cornrows",
+      "wardrobe": "street",
+      "primary": "#ad593d",
+      "secondary": "#414d66",
+      "signature": "Paint-marked canvas backpack",
+      "activity": "Collects a child after school",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_019",
+      "category": "Everyday Residents",
+      "categoryIndex": 0,
+      "label": "The Rain-Ready Resident",
+      "age": 23,
+      "presentation": "F",
+      "build": "petite",
+      "hair": "short02",
+      "wardrobe": "street",
+      "primary": "#376c87",
+      "secondary": "#b4d5d8",
+      "signature": "Bright folded umbrella",
+      "activity": "Hurries toward a bus stop",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_020",
+      "category": "Everyday Residents",
+      "categoryIndex": 0,
+      "label": "The Off-Duty Cook",
+      "age": 52,
+      "presentation": "M",
+      "build": "broad",
+      "hair": "short03",
+      "wardrobe": "casual",
+      "primary": "#825e45",
+      "secondary": "#e2d5ba",
+      "signature": "Checked overshirt and relaxed smile",
+      "activity": "Shops for fresh produce",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_021",
+      "category": "Office Professionals",
+      "categoryIndex": 1,
+      "label": "The Junior Accountant",
+      "age": 25,
+      "presentation": "F",
+      "build": "petite",
+      "hair": "bob01",
+      "wardrobe": "smart",
+      "primary": "#455d80",
+      "secondary": "#e6e1d6",
+      "signature": "Slim document folder",
+      "activity": "Walks to a first professional job",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ]
+    },
+    {
+      "id": "GTD_NPC_022",
+      "category": "Office Professionals",
+      "categoryIndex": 1,
+      "label": "The Legal Associate",
+      "age": 34,
+      "presentation": "M",
+      "build": "tall",
+      "hair": "short01",
+      "wardrobe": "formal",
+      "primary": "#303a49",
+      "secondary": "#c1b6a1",
+      "signature": "Immaculate narrow tie",
+      "activity": "Heads between meetings",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ]
+    },
+    {
+      "id": "GTD_NPC_023",
+      "category": "Office Professionals",
+      "categoryIndex": 1,
+      "label": "The Office Administrator",
+      "age": 48,
+      "presentation": "F",
+      "build": "sturdy",
+      "hair": "braid01",
+      "wardrobe": "smart",
+      "primary": "#7e4b61",
+      "secondary": "#cbbd9b",
+      "signature": "Color-coded planner",
+      "activity": "Runs errands between offices",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ]
+    },
+    {
+      "id": "GTD_NPC_024",
+      "category": "Office Professionals",
+      "categoryIndex": 1,
+      "label": "The Tech Consultant",
+      "age": 29,
+      "presentation": "M",
+      "build": "lean",
+      "hair": "box_braids",
+      "wardrobe": "casual",
+      "primary": "#456a68",
+      "secondary": "#a8c4bb",
+      "signature": "Compact wireless headphones",
+      "activity": "Stops at a coffee kiosk",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ]
+    },
+    {
+      "id": "GTD_NPC_025",
+      "category": "Office Professionals",
+      "categoryIndex": 1,
+      "label": "The Insurance Broker",
+      "age": 41,
+      "presentation": "F",
+      "build": "average",
+      "hair": "ponytail01",
+      "wardrobe": "formal",
+      "primary": "#6a687e",
+      "secondary": "#dfd3bd",
+      "signature": "Distinctive patterned scarf",
+      "activity": "Leaves a client meeting",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ]
+    },
+    {
+      "id": "GTD_NPC_026",
+      "category": "Office Professionals",
+      "categoryIndex": 1,
+      "label": "The Reception Supervisor",
+      "age": 53,
+      "presentation": "M",
+      "build": "broad",
+      "hair": "short04",
+      "wardrobe": "smart",
+      "primary": "#476579",
+      "secondary": "#b6aa91",
+      "signature": "Pocket square",
+      "activity": "Greets staff outside an office",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ]
+    },
+    {
+      "id": "GTD_NPC_027",
+      "category": "Office Professionals",
+      "categoryIndex": 1,
+      "label": "The Urban Planner",
+      "age": 39,
+      "presentation": "F",
+      "build": "tall",
+      "hair": "afro01",
+      "wardrobe": "smart",
+      "primary": "#a07c51",
+      "secondary": "#e0d0aa",
+      "signature": "Rolled city plans",
+      "activity": "Surveys a new streetscape",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ]
+    },
+    {
+      "id": "GTD_NPC_028",
+      "category": "Office Professionals",
+      "categoryIndex": 1,
+      "label": "The Call-Centre Team Lead",
+      "age": 28,
+      "presentation": "M",
+      "build": "compact",
+      "hair": "buzz",
+      "wardrobe": "casual",
+      "primary": "#5b6a8d",
+      "secondary": "#c7c6c0",
+      "signature": "Bright lanyard",
+      "activity": "Takes a break between shifts",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ]
+    },
+    {
+      "id": "GTD_NPC_029",
+      "category": "Office Professionals",
+      "categoryIndex": 1,
+      "label": "The Marketing Strategist",
+      "age": 33,
+      "presentation": "F",
+      "build": "slender",
+      "hair": "long01",
+      "wardrobe": "street",
+      "primary": "#a84e63",
+      "secondary": "#313d55",
+      "signature": "Geometric earrings",
+      "activity": "Photographs a storefront",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ]
+    },
+    {
+      "id": "GTD_NPC_030",
+      "category": "Office Professionals",
+      "categoryIndex": 1,
+      "label": "The School Principal",
+      "age": 57,
+      "presentation": "M",
+      "build": "sturdy",
+      "hair": "short02",
+      "wardrobe": "formal",
+      "primary": "#55504c",
+      "secondary": "#d1bda2",
+      "signature": "Polished leather satchel",
+      "activity": "Attends a district meeting",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central",
+        "South Ward"
+      ]
+    },
+    {
+      "id": "GTD_NPC_031",
+      "category": "Students and Young Adults",
+      "categoryIndex": 2,
+      "label": "The Architecture Student",
+      "age": 22,
+      "presentation": "F",
+      "build": "tall",
+      "hair": "cornrows",
+      "wardrobe": "street",
+      "primary": "#657f76",
+      "secondary": "#e2c7a5",
+      "signature": "Oversized sketch tube",
+      "activity": "Sketches building facades",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_032",
+      "category": "Students and Young Adults",
+      "categoryIndex": 2,
+      "label": "The Music Producer",
+      "age": 27,
+      "presentation": "M",
+      "build": "slender",
+      "hair": "box_braids",
+      "wardrobe": "street",
+      "primary": "#5b417e",
+      "secondary": "#c0a7d9",
+      "signature": "Headphones over one shoulder",
+      "activity": "Visits a rehearsal room",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_033",
+      "category": "Students and Young Adults",
+      "categoryIndex": 2,
+      "label": "The Nursing Student",
+      "age": 21,
+      "presentation": "F",
+      "build": "petite",
+      "hair": "ponytail01",
+      "wardrobe": "casual",
+      "primary": "#69a1a0",
+      "secondary": "#e1e9dc",
+      "signature": "Neatly organized study notes",
+      "activity": "Walks to practical training",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_034",
+      "category": "Students and Young Adults",
+      "categoryIndex": 2,
+      "label": "The Fashion Apprentice",
+      "age": 24,
+      "presentation": "F",
+      "build": "curvy",
+      "hair": "afro01",
+      "wardrobe": "creative",
+      "primary": "#d67837",
+      "secondary": "#3c315e",
+      "signature": "Asymmetric statement earrings",
+      "activity": "Photographs streetwear",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_035",
+      "category": "Students and Young Adults",
+      "categoryIndex": 2,
+      "label": "The Coding Graduate",
+      "age": 23,
+      "presentation": "M",
+      "build": "lean",
+      "hair": "short01",
+      "wardrobe": "casual",
+      "primary": "#344f71",
+      "secondary": "#a5bdcb",
+      "signature": "Worn laptop backpack",
+      "activity": "Heads to a job interview",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_036",
+      "category": "Students and Young Adults",
+      "categoryIndex": 2,
+      "label": "The Dance Enthusiast",
+      "age": 20,
+      "presentation": "F",
+      "build": "athletic",
+      "hair": "braid01",
+      "wardrobe": "sport",
+      "primary": "#c35786",
+      "secondary": "#283a60",
+      "signature": "Colorful wrist bands",
+      "activity": "Practices steps near a plaza",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_037",
+      "category": "Students and Young Adults",
+      "categoryIndex": 2,
+      "label": "The Law Student",
+      "age": 26,
+      "presentation": "M",
+      "build": "average",
+      "hair": "short03",
+      "wardrobe": "smart",
+      "primary": "#6c5647",
+      "secondary": "#ddd0b8",
+      "signature": "Highlighted textbook",
+      "activity": "Meets a study group",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_038",
+      "category": "Students and Young Adults",
+      "categoryIndex": 2,
+      "label": "The Photographer",
+      "age": 28,
+      "presentation": "F",
+      "build": "slender",
+      "hair": "bob02",
+      "wardrobe": "outdoors",
+      "primary": "#536c4e",
+      "secondary": "#b9c39c",
+      "signature": "Camera strap across the torso",
+      "activity": "Documents neighborhood architecture",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_039",
+      "category": "Students and Young Adults",
+      "categoryIndex": 2,
+      "label": "The Environmental Volunteer",
+      "age": 22,
+      "presentation": "M",
+      "build": "sturdy",
+      "hair": "afro01",
+      "wardrobe": "work",
+      "primary": "#4e7748",
+      "secondary": "#d3bb84",
+      "signature": "Reusable water bottle",
+      "activity": "Helps clean a park",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_040",
+      "category": "Students and Young Adults",
+      "categoryIndex": 2,
+      "label": "The First-Job Designer",
+      "age": 25,
+      "presentation": "F",
+      "build": "average",
+      "hair": "long01",
+      "wardrobe": "creative",
+      "primary": "#447b86",
+      "secondary": "#ebba69",
+      "signature": "Handmade fabric patch",
+      "activity": "Visits a creative studio",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_041",
+      "category": "Trades and Essential Workers",
+      "categoryIndex": 3,
+      "label": "The Auto Mechanic",
+      "age": 43,
+      "presentation": "M",
+      "build": "stocky",
+      "hair": "buzz",
+      "wardrobe": "trades",
+      "primary": "#354e64",
+      "secondary": "#a5a49c",
+      "signature": "Oil-stained sleeves",
+      "activity": "Walks from a garage",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_042",
+      "category": "Trades and Essential Workers",
+      "categoryIndex": 3,
+      "label": "The Electrician",
+      "age": 37,
+      "presentation": "F",
+      "build": "athletic",
+      "hair": "cornrows",
+      "wardrobe": "safety",
+      "primary": "#486d64",
+      "secondary": "#f1c44d",
+      "signature": "Compact tool pouch",
+      "activity": "Heads to a maintenance call",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_043",
+      "category": "Trades and Essential Workers",
+      "categoryIndex": 3,
+      "label": "The Carpenter",
+      "age": 55,
+      "presentation": "M",
+      "build": "broad",
+      "hair": "short04",
+      "wardrobe": "trades",
+      "primary": "#7b6045",
+      "secondary": "#d0b58e",
+      "signature": "Tape measure on belt",
+      "activity": "Visits a timber supplier",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_044",
+      "category": "Trades and Essential Workers",
+      "categoryIndex": 3,
+      "label": "The Salon Stylist",
+      "age": 30,
+      "presentation": "F",
+      "build": "curvy",
+      "hair": "braid01",
+      "wardrobe": "creative",
+      "primary": "#8d4f86",
+      "secondary": "#d5a5ca",
+      "signature": "Colorful hair clips",
+      "activity": "Opens a neighborhood salon",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_045",
+      "category": "Trades and Essential Workers",
+      "categoryIndex": 3,
+      "label": "The Delivery Rider Off Duty",
+      "age": 24,
+      "presentation": "M",
+      "build": "lean",
+      "hair": "short02",
+      "wardrobe": "street",
+      "primary": "#47628d",
+      "secondary": "#e6b64e",
+      "signature": "Helmet tucked under arm",
+      "activity": "Stops for a meal",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_046",
+      "category": "Trades and Essential Workers",
+      "categoryIndex": 3,
+      "label": "The Building Cleaner",
+      "age": 49,
+      "presentation": "F",
+      "build": "sturdy",
+      "hair": "short02",
+      "wardrobe": "work",
+      "primary": "#3d7781",
+      "secondary": "#d4d6c7",
+      "signature": "Practical rubber-soled shoes",
+      "activity": "Moves between office buildings",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_047",
+      "category": "Trades and Essential Workers",
+      "categoryIndex": 3,
+      "label": "The Plumber",
+      "age": 46,
+      "presentation": "M",
+      "build": "stocky",
+      "hair": "short03",
+      "wardrobe": "trades",
+      "primary": "#566f77",
+      "secondary": "#c0a887",
+      "signature": "Folded work gloves",
+      "activity": "Leaves a repair job",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_048",
+      "category": "Trades and Essential Workers",
+      "categoryIndex": 3,
+      "label": "The Market Florist",
+      "age": 35,
+      "presentation": "F",
+      "build": "slender",
+      "hair": "ponytail01",
+      "wardrobe": "outdoors",
+      "primary": "#7e8b50",
+      "secondary": "#db9e9d",
+      "signature": "Floral-pattern apron",
+      "activity": "Carries fresh cut flowers",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_049",
+      "category": "Trades and Essential Workers",
+      "categoryIndex": 3,
+      "label": "The Print-Shop Operator",
+      "age": 40,
+      "presentation": "M",
+      "build": "average",
+      "hair": "cornrows",
+      "wardrobe": "casual",
+      "primary": "#8a605a",
+      "secondary": "#e2c5a1",
+      "signature": "Ink-speckled cuff",
+      "activity": "Delivers a print order",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_050",
+      "category": "Trades and Essential Workers",
+      "categoryIndex": 3,
+      "label": "The Construction Surveyor",
+      "age": 32,
+      "presentation": "F",
+      "build": "tall",
+      "hair": "bob01",
+      "wardrobe": "safety",
+      "primary": "#b7833f",
+      "secondary": "#e9d267",
+      "signature": "Reflective safety vest",
+      "activity": "Checks a construction site",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_051",
+      "category": "Affluent Residents",
+      "categoryIndex": 4,
+      "label": "The Understated Investor",
+      "age": 51,
+      "presentation": "M",
+      "build": "tall",
+      "hair": "short04",
+      "wardrobe": "formal",
+      "primary": "#3e4b52",
+      "secondary": "#d5c8b3",
+      "signature": "Minimalist steel watch",
+      "activity": "Walks to a private meeting",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_052",
+      "category": "Affluent Residents",
+      "categoryIndex": 4,
+      "label": "The Gallery Patron",
+      "age": 46,
+      "presentation": "F",
+      "build": "slender",
+      "hair": "bob02",
+      "wardrobe": "smart",
+      "primary": "#866e7b",
+      "secondary": "#e5d9cc",
+      "signature": "Sculptural silver earrings",
+      "activity": "Visits an art exhibition",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_053",
+      "category": "Affluent Residents",
+      "categoryIndex": 4,
+      "label": "The Young Entrepreneur",
+      "age": 29,
+      "presentation": "F",
+      "build": "athletic",
+      "hair": "braid01",
+      "wardrobe": "smart",
+      "primary": "#4d807a",
+      "secondary": "#e7d4b4",
+      "signature": "Bold geometric handbag",
+      "activity": "Meets a business partner",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_054",
+      "category": "Affluent Residents",
+      "categoryIndex": 4,
+      "label": "The Luxury Minimalist",
+      "age": 38,
+      "presentation": "M",
+      "build": "lean",
+      "hair": "buzz",
+      "wardrobe": "formal",
+      "primary": "#a79a89",
+      "secondary": "#2f343c",
+      "signature": "Monochrome outfit",
+      "activity": "Leaves a boutique hotel",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_055",
+      "category": "Affluent Residents",
+      "categoryIndex": 4,
+      "label": "The Sports-Car Enthusiast",
+      "age": 34,
+      "presentation": "M",
+      "build": "athletic",
+      "hair": "short01",
+      "wardrobe": "street",
+      "primary": "#9a4a45",
+      "secondary": "#2a3440",
+      "signature": "Classic driving gloves",
+      "activity": "Meets friends at a cafe",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_056",
+      "category": "Affluent Residents",
+      "categoryIndex": 4,
+      "label": "The Philanthropist",
+      "age": 63,
+      "presentation": "F",
+      "build": "sturdy",
+      "hair": "afro01",
+      "wardrobe": "traditional",
+      "primary": "#7a596f",
+      "secondary": "#d4aa70",
+      "signature": "Elegant patterned shawl",
+      "activity": "Attends a community event",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_057",
+      "category": "Affluent Residents",
+      "categoryIndex": 4,
+      "label": "The Contemporary Architect",
+      "age": 44,
+      "presentation": "M",
+      "build": "tall",
+      "hair": "cornrows",
+      "wardrobe": "smart",
+      "primary": "#445c61",
+      "secondary": "#d5c6ad",
+      "signature": "Distinctive round glasses",
+      "activity": "Studies a new building",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_058",
+      "category": "Affluent Residents",
+      "categoryIndex": 4,
+      "label": "The Boutique Owner",
+      "age": 37,
+      "presentation": "F",
+      "build": "curvy",
+      "hair": "long01",
+      "wardrobe": "creative",
+      "primary": "#aa735b",
+      "secondary": "#e9d2b6",
+      "signature": "Layered necklaces",
+      "activity": "Checks a storefront",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_059",
+      "category": "Affluent Residents",
+      "categoryIndex": 4,
+      "label": "The Retired Executive",
+      "age": 71,
+      "presentation": "M",
+      "build": "average",
+      "hair": "short04",
+      "wardrobe": "formal",
+      "primary": "#5d6067",
+      "secondary": "#ded5c4",
+      "signature": "Well-worn signet ring",
+      "activity": "Takes an afternoon stroll",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_060",
+      "category": "Affluent Residents",
+      "categoryIndex": 4,
+      "label": "The Art Collector",
+      "age": 56,
+      "presentation": "F",
+      "build": "tall",
+      "hair": "bob01",
+      "wardrobe": "smart",
+      "primary": "#655b7d",
+      "secondary": "#d5c4a7",
+      "signature": "Statement patterned coat",
+      "activity": "Visits a gallery opening",
+      "districtFit": [
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_061",
+      "category": "Street Personalities",
+      "categoryIndex": 5,
+      "label": "The Corner Fruit Vendor",
+      "age": 50,
+      "presentation": "F",
+      "build": "sturdy",
+      "hair": "afro01",
+      "wardrobe": "traditional",
+      "primary": "#a94d42",
+      "secondary": "#d5a64c",
+      "signature": "Bright patterned apron",
+      "activity": "Prepares a fruit stall",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ]
+    },
+    {
+      "id": "GTD_NPC_062",
+      "category": "Street Personalities",
+      "categoryIndex": 5,
+      "label": "The Street Saxophonist",
+      "age": 42,
+      "presentation": "M",
+      "build": "slender",
+      "hair": "short03",
+      "wardrobe": "smart",
+      "primary": "#544f6d",
+      "secondary": "#c2ae8c",
+      "signature": "Weathered instrument case",
+      "activity": "Plays near a plaza",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ]
+    },
+    {
+      "id": "GTD_NPC_063",
+      "category": "Street Personalities",
+      "categoryIndex": 5,
+      "label": "The Coffee Cart Regular",
+      "age": 31,
+      "presentation": "M",
+      "build": "average",
+      "hair": "buzz",
+      "wardrobe": "casual",
+      "primary": "#5c7358",
+      "secondary": "#d4ba8b",
+      "signature": "Reusable takeaway cup",
+      "activity": "Stops at the same cart daily",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ]
+    },
+    {
+      "id": "GTD_NPC_064",
+      "category": "Street Personalities",
+      "categoryIndex": 5,
+      "label": "The Newspaper Seller",
+      "age": 67,
+      "presentation": "M",
+      "build": "stocky",
+      "hair": "short04",
+      "wardrobe": "casual",
+      "primary": "#6d5948",
+      "secondary": "#d2c0a3",
+      "signature": "Flat cap and folded newspaper",
+      "activity": "Greets morning commuters",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ]
+    },
+    {
+      "id": "GTD_NPC_065",
+      "category": "Street Personalities",
+      "categoryIndex": 5,
+      "label": "The Street Artist",
+      "age": 27,
+      "presentation": "F",
+      "build": "lean",
+      "hair": "box_braids",
+      "wardrobe": "creative",
+      "primary": "#6d5aa4",
+      "secondary": "#e4a75e",
+      "signature": "Paint-flecked overalls",
+      "activity": "Sketches a mural",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ]
+    },
+    {
+      "id": "GTD_NPC_066",
+      "category": "Street Personalities",
+      "categoryIndex": 5,
+      "label": "The Neighborhood Barber",
+      "age": 39,
+      "presentation": "M",
+      "build": "broad",
+      "hair": "short01",
+      "wardrobe": "smart",
+      "primary": "#3e576b",
+      "secondary": "#cbb99b",
+      "signature": "Perfectly groomed beard",
+      "activity": "Opens a barber shop",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ]
+    },
+    {
+      "id": "GTD_NPC_067",
+      "category": "Street Personalities",
+      "categoryIndex": 5,
+      "label": "The Community Gardener",
+      "age": 58,
+      "presentation": "F",
+      "build": "sturdy",
+      "hair": "cornrows",
+      "wardrobe": "outdoors",
+      "primary": "#66804b",
+      "secondary": "#c6b48b",
+      "signature": "Wide-brim sun hat",
+      "activity": "Tends public flowerbeds",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ]
+    },
+    {
+      "id": "GTD_NPC_068",
+      "category": "Street Personalities",
+      "categoryIndex": 5,
+      "label": "The Food Stall Owner",
+      "age": 45,
+      "presentation": "F",
+      "build": "curvy",
+      "hair": "ponytail01",
+      "wardrobe": "work",
+      "primary": "#9d6040",
+      "secondary": "#edcc94",
+      "signature": "Checkered apron",
+      "activity": "Serves lunch to workers",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ]
+    },
+    {
+      "id": "GTD_NPC_069",
+      "category": "Street Personalities",
+      "categoryIndex": 5,
+      "label": "The Local Chess Enthusiast",
+      "age": 73,
+      "presentation": "M",
+      "build": "slender",
+      "hair": "short04",
+      "wardrobe": "traditional",
+      "primary": "#5b5d4c",
+      "secondary": "#d8cba4",
+      "signature": "Small chessboard case",
+      "activity": "Meets friends at a park",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ]
+    },
+    {
+      "id": "GTD_NPC_070",
+      "category": "Street Personalities",
+      "categoryIndex": 5,
+      "label": "The Busker Singer",
+      "age": 26,
+      "presentation": "F",
+      "build": "petite",
+      "hair": "braid01",
+      "wardrobe": "street",
+      "primary": "#a2577b",
+      "secondary": "#f0bf76",
+      "signature": "Beaded guitar strap",
+      "activity": "Performs at a street corner",
+      "districtFit": [
+        "South Ward",
+        "Meridian Central",
+        "North Heights"
+      ]
+    },
+    {
+      "id": "GTD_NPC_071",
+      "category": "Older Residents",
+      "categoryIndex": 6,
+      "label": "The Retired Gentleman",
+      "age": 76,
+      "presentation": "M",
+      "build": "slender",
+      "hair": "short04",
+      "wardrobe": "smart",
+      "primary": "#79624f",
+      "secondary": "#e5d6bb",
+      "signature": "Brown flat cap and silver beard",
+      "activity": "Walks to his favorite bench",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_072",
+      "category": "Older Residents",
+      "categoryIndex": 6,
+      "label": "The Active Grandmother",
+      "age": 68,
+      "presentation": "F",
+      "build": "athletic",
+      "hair": "short02",
+      "wardrobe": "sport",
+      "primary": "#5c7892",
+      "secondary": "#d8c6a4",
+      "signature": "Bright walking shoes",
+      "activity": "Exercises in the park",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_073",
+      "category": "Older Residents",
+      "categoryIndex": 6,
+      "label": "The Former Teacher",
+      "age": 72,
+      "presentation": "F",
+      "build": "average",
+      "hair": "bob01",
+      "wardrobe": "traditional",
+      "primary": "#7d5272",
+      "secondary": "#e2c8a2",
+      "signature": "Small reading glasses",
+      "activity": "Visits a former colleague",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_074",
+      "category": "Older Residents",
+      "categoryIndex": 6,
+      "label": "The Veteran Musician",
+      "age": 79,
+      "presentation": "M",
+      "build": "lean",
+      "hair": "afro01",
+      "wardrobe": "casual",
+      "primary": "#5a6474",
+      "secondary": "#b9ad94",
+      "signature": "Vintage patterned shirt",
+      "activity": "Visits a music shop",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_075",
+      "category": "Older Residents",
+      "categoryIndex": 6,
+      "label": "The Retired Nurse",
+      "age": 66,
+      "presentation": "F",
+      "build": "sturdy",
+      "hair": "cornrows",
+      "wardrobe": "smart",
+      "primary": "#4e867b",
+      "secondary": "#ddd4c2",
+      "signature": "Simple enamel brooch",
+      "activity": "Volunteers at a clinic",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_076",
+      "category": "Older Residents",
+      "categoryIndex": 6,
+      "label": "The Avid Birdwatcher",
+      "age": 70,
+      "presentation": "M",
+      "build": "average",
+      "hair": "short04",
+      "wardrobe": "outdoors",
+      "primary": "#61724d",
+      "secondary": "#b5a77e",
+      "signature": "Binocular strap",
+      "activity": "Watches birds in the park",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_077",
+      "category": "Older Residents",
+      "categoryIndex": 6,
+      "label": "The Stylish Auntie",
+      "age": 64,
+      "presentation": "F",
+      "build": "curvy",
+      "hair": "braid01",
+      "wardrobe": "traditional",
+      "primary": "#a55482",
+      "secondary": "#f0c67b",
+      "signature": "Coordinated headwrap",
+      "activity": "Visits family and friends",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_078",
+      "category": "Older Residents",
+      "categoryIndex": 6,
+      "label": "The Retired Engineer",
+      "age": 81,
+      "presentation": "M",
+      "build": "sturdy",
+      "hair": "short03",
+      "wardrobe": "smart",
+      "primary": "#57616b",
+      "secondary": "#d5c4ab",
+      "signature": "Old-fashioned wristwatch",
+      "activity": "Studies new construction",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_079",
+      "category": "Older Residents",
+      "categoryIndex": 6,
+      "label": "The Morning Market Regular",
+      "age": 74,
+      "presentation": "F",
+      "build": "petite",
+      "hair": "short02",
+      "wardrobe": "casual",
+      "primary": "#a07c50",
+      "secondary": "#e6d8c0",
+      "signature": "Woven shopping basket",
+      "activity": "Buys fresh produce",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_080",
+      "category": "Older Residents",
+      "categoryIndex": 6,
+      "label": "The Lifelong Cyclist",
+      "age": 69,
+      "presentation": "M",
+      "build": "athletic",
+      "hair": "buzz",
+      "wardrobe": "sport",
+      "primary": "#437b7c",
+      "secondary": "#d6e1ca",
+      "signature": "Retro cycling cap",
+      "activity": "Rides an early morning loop",
+      "districtFit": [
+        "South Ward",
+        "North Heights",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_081",
+      "category": "Fitness and Sports Enthusiasts",
+      "categoryIndex": 7,
+      "label": "The Morning Jogger",
+      "age": 43,
+      "presentation": "F",
+      "build": "lean",
+      "hair": "ponytail01",
+      "wardrobe": "sport",
+      "primary": "#4d7c99",
+      "secondary": "#d6a0a2",
+      "signature": "Light running jacket",
+      "activity": "Runs before work",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_082",
+      "category": "Fitness and Sports Enthusiasts",
+      "categoryIndex": 7,
+      "label": "The Amateur Boxer",
+      "age": 28,
+      "presentation": "M",
+      "build": "broad",
+      "hair": "buzz",
+      "wardrobe": "sport",
+      "primary": "#9c4d45",
+      "secondary": "#292f3b",
+      "signature": "Hand wraps",
+      "activity": "Heads to a boxing gym",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_083",
+      "category": "Fitness and Sports Enthusiasts",
+      "categoryIndex": 7,
+      "label": "The Weekend Cyclist",
+      "age": 36,
+      "presentation": "F",
+      "build": "athletic",
+      "hair": "braid01",
+      "wardrobe": "sport",
+      "primary": "#6e8d5c",
+      "secondary": "#e7d578",
+      "signature": "Reflective cycling band",
+      "activity": "Meets a cycling group",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_084",
+      "category": "Fitness and Sports Enthusiasts",
+      "categoryIndex": 7,
+      "label": "The Football Coach",
+      "age": 54,
+      "presentation": "M",
+      "build": "sturdy",
+      "hair": "short04",
+      "wardrobe": "sport",
+      "primary": "#365e83",
+      "secondary": "#e2c578",
+      "signature": "Whistle on a lanyard",
+      "activity": "Runs youth football practice",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_085",
+      "category": "Fitness and Sports Enthusiasts",
+      "categoryIndex": 7,
+      "label": "The Yoga Instructor",
+      "age": 33,
+      "presentation": "F",
+      "build": "slender",
+      "hair": "long01",
+      "wardrobe": "sport",
+      "primary": "#977aa0",
+      "secondary": "#d8c8d4",
+      "signature": "Rolled yoga mat",
+      "activity": "Leads a morning class",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_086",
+      "category": "Fitness and Sports Enthusiasts",
+      "categoryIndex": 7,
+      "label": "The Recreational Basketballer",
+      "age": 24,
+      "presentation": "M",
+      "build": "tall",
+      "hair": "cornrows",
+      "wardrobe": "sport",
+      "primary": "#a76c40",
+      "secondary": "#354e70",
+      "signature": "Sleeveless training top",
+      "activity": "Heads to a public court",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_087",
+      "category": "Fitness and Sports Enthusiasts",
+      "categoryIndex": 7,
+      "label": "The Dance Fitness Regular",
+      "age": 48,
+      "presentation": "F",
+      "build": "curvy",
+      "hair": "afro01",
+      "wardrobe": "sport",
+      "primary": "#c36880",
+      "secondary": "#5b4f82",
+      "signature": "Bright coordinated trainers",
+      "activity": "Attends a dance fitness class",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_088",
+      "category": "Fitness and Sports Enthusiasts",
+      "categoryIndex": 7,
+      "label": "The Trail Runner",
+      "age": 30,
+      "presentation": "M",
+      "build": "lean",
+      "hair": "short02",
+      "wardrobe": "outdoors",
+      "primary": "#5c8a71",
+      "secondary": "#cfbd8b",
+      "signature": "Trail running waist belt",
+      "activity": "Returns from a hill run",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_089",
+      "category": "Fitness and Sports Enthusiasts",
+      "categoryIndex": 7,
+      "label": "The Swimming Enthusiast",
+      "age": 40,
+      "presentation": "F",
+      "build": "athletic",
+      "hair": "bob01",
+      "wardrobe": "casual",
+      "primary": "#4c8b9b",
+      "secondary": "#d9d1bb",
+      "signature": "Compact pool bag",
+      "activity": "Walks to an aquatic center",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_090",
+      "category": "Fitness and Sports Enthusiasts",
+      "categoryIndex": 7,
+      "label": "The Weekend Hiker",
+      "age": 46,
+      "presentation": "M",
+      "build": "sturdy",
+      "hair": "short03",
+      "wardrobe": "outdoors",
+      "primary": "#75824b",
+      "secondary": "#c6a87a",
+      "signature": "Weathered hiking boots",
+      "activity": "Heads to a trailhead",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_091",
+      "category": "Public-Service and Community Workers",
+      "categoryIndex": 8,
+      "label": "The Municipal Inspector",
+      "age": 45,
+      "presentation": "F",
+      "build": "average",
+      "hair": "bob02",
+      "wardrobe": "uniform",
+      "primary": "#526b78",
+      "secondary": "#d2c8b7",
+      "signature": "Municipal ID lanyard",
+      "activity": "Inspects street infrastructure",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_092",
+      "category": "Public-Service and Community Workers",
+      "categoryIndex": 8,
+      "label": "The Security Guard",
+      "age": 35,
+      "presentation": "M",
+      "build": "broad",
+      "hair": "buzz",
+      "wardrobe": "uniform",
+      "primary": "#293b54",
+      "secondary": "#9caab6",
+      "signature": "Plain navy security cap",
+      "activity": "Patrols a commercial block",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_093",
+      "category": "Public-Service and Community Workers",
+      "categoryIndex": 8,
+      "label": "The Paramedic Off Duty",
+      "age": 32,
+      "presentation": "F",
+      "build": "athletic",
+      "hair": "ponytail01",
+      "wardrobe": "casual",
+      "primary": "#4c857d",
+      "secondary": "#d6e4d8",
+      "signature": "Medical-alert keychain",
+      "activity": "Walks home after a shift",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_094",
+      "category": "Public-Service and Community Workers",
+      "categoryIndex": 8,
+      "label": "The Fire Service Officer",
+      "age": 41,
+      "presentation": "M",
+      "build": "sturdy",
+      "hair": "short01",
+      "wardrobe": "work",
+      "primary": "#735a43",
+      "secondary": "#d4bd9d",
+      "signature": "Service jacket",
+      "activity": "Leaves a training session",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_095",
+      "category": "Public-Service and Community Workers",
+      "categoryIndex": 8,
+      "label": "The Community Librarian",
+      "age": 55,
+      "presentation": "F",
+      "build": "slender",
+      "hair": "braid01",
+      "wardrobe": "smart",
+      "primary": "#6b6d8b",
+      "secondary": "#e3d5c2",
+      "signature": "Canvas book bag",
+      "activity": "Organizes a reading event",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_096",
+      "category": "Public-Service and Community Workers",
+      "categoryIndex": 8,
+      "label": "The School Crossing Marshal",
+      "age": 60,
+      "presentation": "M",
+      "build": "average",
+      "hair": "short04",
+      "wardrobe": "safety",
+      "primary": "#c5a346",
+      "secondary": "#e5dfb5",
+      "signature": "Reflective vest and cap",
+      "activity": "Supervises a school crossing",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_097",
+      "category": "Public-Service and Community Workers",
+      "categoryIndex": 8,
+      "label": "The Community Health Worker",
+      "age": 38,
+      "presentation": "F",
+      "build": "sturdy",
+      "hair": "cornrows",
+      "wardrobe": "work",
+      "primary": "#44867e",
+      "secondary": "#e3d2a7",
+      "signature": "Practical shoulder bag",
+      "activity": "Visits residents",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_098",
+      "category": "Public-Service and Community Workers",
+      "categoryIndex": 8,
+      "label": "The Transit Supervisor",
+      "age": 49,
+      "presentation": "M",
+      "build": "stocky",
+      "hair": "short03",
+      "wardrobe": "uniform",
+      "primary": "#536b83",
+      "secondary": "#c9b6a2",
+      "signature": "Service clipboard",
+      "activity": "Checks transport operations",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_099",
+      "category": "Public-Service and Community Workers",
+      "categoryIndex": 8,
+      "label": "The Park Maintenance Lead",
+      "age": 52,
+      "presentation": "F",
+      "build": "athletic",
+      "hair": "short02",
+      "wardrobe": "safety",
+      "primary": "#6a8548",
+      "secondary": "#e7d369",
+      "signature": "Gardening gloves",
+      "activity": "Coordinates park upkeep",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    },
+    {
+      "id": "GTD_NPC_100",
+      "category": "Public-Service and Community Workers",
+      "categoryIndex": 8,
+      "label": "The Neighborhood Mediator",
+      "age": 58,
+      "presentation": "M",
+      "build": "slender",
+      "hair": "short04",
+      "wardrobe": "traditional",
+      "primary": "#6b5d79",
+      "secondary": "#d3b98b",
+      "signature": "Simple beaded bracelet",
+      "activity": "Attends a community meeting",
+      "districtFit": [
+        "North Heights",
+        "South Ward",
+        "Meridian Central"
+      ]
+    }
+  ]
+}

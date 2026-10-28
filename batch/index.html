@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G.T.D Meridia 90 | Ara 3D Gen</title>
+  <meta name="description" content="Generate 90 curated South African Meridia NPCs in nine repeatable groups of ten, then export animated GLB ZIPs." />
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">ARA 3D GEN / G.T.D MERIDIA</p>
+        <h1>90 Residents · Character Laboratory</h1>
+        <p class="lede">Nine curated groups of ten individually designed South African city residents. Generate and export each group; keep IDs 011–100 unchanged for G.T.D.</p>
+      </div>
+      <nav aria-label="Tools">
+        <a href="/app/">Single character editor ↗</a>
+        <a href="/">Ara home ↗</a>
+      </nav>
+    </header>
+    <section class="layout">
+      <div class="panel">
+        <h2>Character collection</h2>
+        <div class="fields">
+          <label class="wide">Generation mode
+            <select id="mode"><option value="curated90" selected>Meridia — 90 curated residents</option><option value="random">Legacy random batch</option></select>
+          </label>
+          <label class="wide">Category · ten distinct residents per ZIP
+            <select id="category"></select>
+          </label>
+          <p id="category-note" class="note wide"></p>
+          <label>Random count <input id="count" type="number" min="1" max="50" step="1" value="10" /></label>
+          <label>Random base seed <input id="seed" type="number" min="0" max="999999999" step="1" value="42027" /></label>
+          <label class="wide">Geometry detail
+            <select id="detail"><option value="low" selected>Low — preferred for G.T.D</option><option value="medium">Medium</option><option value="high">High — large exports</option></select>
+          </label>
+          <label class="wide">Skeleton
+            <select id="rig"><option value="game_lite" selected>Game lite — 25 bones</option><option value="game">Game — 65 bones</option></select>
+          </label>
+        </div>
+        <fieldset>
+          <legend>Embedded animations</legend>
+          <label class="check"><input id="clip-idle" type="checkbox" value="idle" checked /> Idle</label>
+          <label class="check"><input id="clip-walk" type="checkbox" value="walk" checked /> Walk</label>
+          <label class="check"><input id="clip-run" type="checkbox" value="run" checked /> Run</label>
+        </fieldset>
+        <div class="actions">
+          <button id="generate" class="primary">Generate selected 10</button>
+          <button id="cancel" disabled>Stop after current</button>
+          <button id="next">Next group →</button>
+        </div>
+        <p class="note">Each group is generated locally in a single browser worker. A ZIP contains 10 source GLBs, reproducible parameters, individual creative profiles and the full 90-person character bible. Preview individual exports in the Ara editor before optimizing them. Keep each ZIP before generating the next group.</p>
+        <button id="download-bible" class="secondary">Download complete 90-character creative bible (JSON)</button>
+      </div>
+      <div class="panel results">
+        <div class="result-heading"><h2>Batch progress</h2><span class="pill">9 × 10 curated</span></div>
+        <p id="status" role="status" aria-live="polite">Ready to generate.</p>
+        <progress id="progress" value="0" max="10" aria-label="Characters completed"></progress>
+        <p id="summary">0 characters</p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>NPC ID</th><th>Identity</th><th>GLB</th><th>Seed</th><th>Triangles</th><th>Size</th><th>Budget</th><th>Inspect</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+        <div class="archive">
+          <div><strong>Export archive</strong><p id="zip-status">No archive yet</p></div>
+          <button id="download" class="primary" disabled>Download group ZIP ↓</button>
+        </div>
+      </div>
+    </section>
+    <footer>G.T.D Meridia 90 · IDs 011–100 · Existing 001–010 unchanged · Source GLBs require manual inspection and optimization before game integration.</footer>
+  </main>
+  <script type="module" src="/src/batch/main.ts"></script>
+</body>
+</html>
