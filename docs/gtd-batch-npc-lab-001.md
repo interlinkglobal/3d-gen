@@ -1,45 +1,38 @@
-# G.T.D NPC Batch Laboratory — Experiment 001
+# G.T.D Meridia 90 — Curated NPC Generation Preparation (2026-10-28)
 
-This feature is isolated in the \`interlinkglobal/3d-gen\` fork. It does not modify the G.T.D game.
+## Purpose
+Prepare 90 **different** contemporary South African urban residents in the `interlinkglobal/3d-gen` fork for the owner to export, optimize and commit into the G.T.D game later. This task does **not** change the game or its currently accepted 100-agent/10-appearance simulation.
 
-## Browser workflow
+## Creative source of truth
+`data/gtd-meridia-character-bible-90.json` defines 90 stable identities `GTD_NPC_011`–`GTD_NPC_100` across nine groups of ten: everyday residents; office professionals; students and young adults; trades and essential workers; affluent residents; street personalities; older residents; fitness and sports enthusiasts; public-service and community workers.
 
-1. Open \`/batch/\` on the deployed Ara fork.
-2. Choose 1–50 characters, a base seed, geometry detail, skeleton and animation clips.
-3. Click **Generate batch**. A dedicated Web Worker loads MakeHuman assets once, then builds and exports one character at a time.
-4. Review individual GLB byte sizes and triangle counts. The 1 MB threshold is advisory.
-5. Download the ZIP. It includes \`characters/*.glb\`, \`specifications/*.params.json\`, \`manifest.json\` and \`README.txt\`.
-6. Validate appearance, animation integrity, mobile performance and compression **before** committing any GLB to G.T.D.
+Each entry has a creative label, age, presentation, body-build direction, hair direction, wardrobe family, two-color palette, individual signature, activity and suggested district reuse. It is a **creative reference** as well as a batch-generation input. IDs 001–010 remain reserved for the ten existing optimized NPCs.
 
-The batch uses deterministic seeds \`(baseSeed + index * 7919) % 1000000000\`, plus the upstream \`randomParams()\` function. Every character has its own morphology, clothes and appearance. The exported params file makes each character reproducible.
+## How to generate
+1. Visit the deployed fork's `/batch/` page.
+2. Select **Meridia — 90 curated residents** (default) and category 01. The category dropdown shows the exact NPC ID range.
+3. Leave default **Low** detail, **Game lite** rig and **Idle/Walk/Run** clips. Idle and Walk are mandatory for curated pedestrian compatibility.
+4. Click **Generate selected 10**. One Web Worker builds one character at a time, loading shared MakeHuman assets only once per group.
+5. Inspect each generated character with **Preview ↗** (opens the Ara single-character editor with the exact reproducible parameters). Check appearance, face, clothes and animation.
+6. Download that group's ZIP **before** generating the next group. Then choose **Next group** and repeat through group 09.
+7. The nine ZIPs contain 90 source GLBs plus per-character parameter files, individual creative profiles, a manifest and the entire reusable 90-character bible.
+8. Optimize, verify GLB runtime compatibility and commit assets to GTD **separately**. This fork intentionally does not upload assets to the game.
 
-## Performance and storage
+## Reproducibility
+For NPC numeric ID `N`, seed `(42027+(N-1)*7919)%1000000000`. Unlike the original random-batch experiment, each creative profile is mapped to reproducible MakeHuman parameters, including age, build, hair, color palette and clothing family. Selected outfits are validated against the live asset catalog; supported procedural garments are used for uniform, trades, safety, traditional, outdoor and some creative/street styles.
 
-- The default is **10 characters, low geometry, game-lite skeleton, Idle/Walk/Run**.
-- A single worker avoids running 50 simultaneous CPU-heavy builds.
-- GLBs are stored in browser memory until the ZIP is prepared. For large batches or high detail, memory usage can become substantial; start with 10.
-- Stop is cooperative: the current character may finish before cancellation is processed. A partial batch can still be downloaded.
-- ZIP packaging runs asynchronously. GLB entries use ZIP level 0 because their embedded data may already be compressed.
-- **ZIP size is not runtime GLB size.** Texture transcoding, mesh quantization, animation simplification and Babylon compatibility checks remain separate work.
+**Honest representation:** Not every narrative detail is a supported Ara 3D object. A character's shopping bag, rolled sleeve, instrument, glasses or hairstyle nuance may appear in the creative profile without being physically present on the GLB. The preview is the owner's visual acceptance gate; refine or reject any approximation before exporting to the game.
 
-## Hosting prerequisite
+## Resource policy
+- Export nine groups of ten rather than 90 models in a single browser memory allocation.
+- Default skeleton `game_lite`, geometry `low`, embedded `Idle`, `Walk`, `Run`.
+- Source GLBs are **not guaranteed below 1 MiB**; the UI reports size but does not claim compression.
+- Target **under 1 MiB per optimized GLB**, as with the accepted ten NPCs. Do not rely on ZIP compression as a substitute for GLB optimization.
+- Reuse the creative bible in future districts, keeping stable IDs and identity even if the NPC's location or schedule changes.
+- Do not merge this work into the G.T.D game before the owner has exported, optimized, committed and accepted the assets.
 
-The upstream repository deliberately does **not** commit \`public/assets/\`. Its \`setup-assets\` script downloads the CC0 MakeHuman inputs (~420 MB) and builds web-ready packs (~85 MB).
-
-This branch adds \`prebuild: npm run setup-assets -- --skip-mocap\`, ensuring Vercel generates those assets before \`vite build\`. The mocap rebuild download is omitted because baked clips are committed in \`src/core/anim/clips/mocap-data.ts\`.
-
-If Vercel build time or download reliability becomes a bottleneck, move asset preparation into a separately cached CI artifact or dedicated static asset origin. Do not silently ship a UI that lacks \`assets/catalog.json\`, \`assets/base.pack\` or \`assets/targets.pack\`.
-
-## Acceptance checklist
-
-- \`/batch/\` loads and can fetch MakeHuman assets.
-- Batch of 2 produces two nonidentical rigged GLBs with Idle, Walk and Run.
-- ZIP opens and contains each GLB, its corresponding params JSON, and a manifest.
-- Rerunning the same seed and settings reproduces the same character specifications.
-- Stop returns a partial ZIP when at least one character has completed.
-- The standard \`/app/\` editor continues to work.
-- G.T.D main branch remains unchanged.
+## Validation
+`npm run test:curated` checks all 90 IDs, nine groups, unique names/seeds/signatures, ages, district metadata and supported parameter generation. `npm run build` runs TypeScript validation and the curated test before building the browser lab.
 
 ## License
-
-Code is MIT; MakeHuman base assets are CC0. Motion capture is from CMU, usable in games but not for resale as standalone motion data. Retain upstream license notices.
+Ara code is MIT; MakeHuman source assets are CC0. Keep upstream motion-capture license notices with any redistributed files.
