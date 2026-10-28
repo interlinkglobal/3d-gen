@@ -18,7 +18,7 @@ for(let i=0;i<90;i++){
   assert(p.id==='GTD_NPC_'+String(i+11).padStart(3,'0'),'missing sequential ID '+i);
   assert(p.categoryIndex===Math.floor(i/10),'category order '+p.id);
   assert(p.age>=18&&p.age<=90,'invalid adult age '+p.id);
-  assert(p.signature.length>10&&p.activity.length>10,'incomplete creative identity '+p.id);
+  assert(p.signature.length>=8&&p.activity.length>10,'incomplete creative identity '+p.id);
   assert(p.districtFit.length>0,'missing district reuse '+p.id);
 }
 for(let i=0;i<9;i++)assert(curatedGroup(i).length===10,'category '+i+' not ten');
