@@ -286,7 +286,7 @@ export const PRESETS: Record<string, Partial<HumanParams>> = {
     },
   },
   // G.T.D mission handler: an intentionally approximate reference-derived starting point.
-  // Ara does not yet supply matching spectacles or a long overcoat.
+  // Long formal overcoat is not yet modeled; round spectacles are now procedural.
   Finch: {
     seed: 112026,
     gender: 1,
@@ -309,7 +309,8 @@ export const PRESETS: Record<string, Partial<HumanParams>> = {
     outfit: 'male_elegantsuit01',
     outfitTint: '#35383d',
     shoes: 'shoes02',
-    accessories: ['watch'],
+    accessories: ['watch', 'round_glasses'],
+    garmentStyles: { round_glasses: { pattern: 'solid', color: '#44332e', color2: '#bda37f' } },
     detail: 'medium',
     rig: 'game',
     faceBones: true,
