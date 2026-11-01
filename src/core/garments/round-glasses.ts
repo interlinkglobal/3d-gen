@@ -8,7 +8,7 @@ import type { Vec3 } from '../math';
 import { cm, REGION } from './body';
 import type { GarmentStyle, GCtx, GPart } from './kit';
 import { mat, points } from './kit';
-import { cord, merge, v3 } from './ring';
+import { cord, merge } from './ring';
 
 /** Clear, almost invisible lens discs: retain readable eyes in browser gameplay. */
 function lensDisc(center: Vec3, r: number, segments = 32): PolyMesh {
