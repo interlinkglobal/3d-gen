@@ -43,7 +43,11 @@ const shared = hash.get('c');
 const fromLink = shared ? decodeCharacter(shared, store.params.detail) : null;
 const presetName = hash.get('preset');
 if (fromLink) store.params = fromLink;
-else if (presetName && PRESETS[presetName]) store.params = { ...DEFAULT_PARAMS, ...PRESETS[presetName], name: presetName, detail: store.params.detail };
+else if (presetName && PRESETS[presetName]) store.params = { ...DEFAULT_PARAMS, ...PRESETS[presetName], name: presetName, detail: presetName === 'Finch' ? 'medium' : store.params.detail };
+if (!fromLink && presetName === 'Finch') {
+  // G.T.D export link opens an animated Finch.glb instead of the app's usual FBX default.
+  store.setExport({ mode: 'animated', format: 'glb', packaging: 'embedded', clips: ['idle', 'talk', 'sit_idle'] });
+}
 store.emit('sync');
 gen.regenerate();
 const clipName = hash.get('clip');
