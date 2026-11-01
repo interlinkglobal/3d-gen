@@ -1,5 +1,6 @@
 /** Header: presets, name, seed and randomize; and the viewport's view toggles. */
 import { DEFAULT_PARAMS, PRESETS, randomParams } from '../../core/params';
+import { CLIPS } from '../../core/anim/clips';
 import type { Ctx } from './context';
 import { $ } from './dom';
 
@@ -12,7 +13,8 @@ export function header(ctx: Ctx): void {
     const name = presetSel.value;
     if (!name) return;
     presetSel.value = '';
-    store.replaceAll({ ...DEFAULT_PARAMS, ...PRESETS[name], name, detail: name === 'Finch' ? 'medium' : store.params.detail });
+    store.replaceAll({ ...DEFAULT_PARAMS, ...PRESETS[name], name, detail: name === 'Finch' || name === 'Reese' ? 'medium' : store.params.detail });
+    if (name === 'Reese') store.setExport({ mode: 'animated', format: 'glb', packaging: 'embedded', clips: CLIPS.map((c) => c.id), rootMotion: false });
     if (name === 'Finch') store.setExport({ mode: 'animated', format: 'glb', packaging: 'embedded', clips: ['idle', 'talk', 'sit_idle'] });
   });
 

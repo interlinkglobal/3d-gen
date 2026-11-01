@@ -16,6 +16,7 @@ import { along, card, cord, ellipsoid, frameOf, hullRing, loftRings, merge, orie
 import { buildShell } from './shell';
 import { featherTexture, makePattern, palette, type Pattern } from './textures';
 import { roundGlasses } from './round-glasses';
+import { buildTailoredOvercoat } from './overcoat';
 import { HEELS } from './heels';
 import { WRIST } from './wrist';
 import { YORUBA } from './yoruba';
@@ -67,6 +68,10 @@ function uniformShirt(g: GCtx, st: GarmentStyle, long: boolean): GPart[] {
 
 export const GARMENTS: GarmentDef[] = [
   // ---------------- Tops
+  {
+    id: 'tailored_overcoat', label: 'Tailored overcoat + dress shirt', slot: 'top', patterns: ['solid'], color: '#17191d', color2: '#f0f1ef',
+    build: buildTailoredOvercoat,
+  },
   {
     id: 'tank_top', label: 'Tank top', slot: 'top', patterns: ['solid', 'khaki', 'camo', 'tattered'], color: '#3f6b5a', color2: '#2a2a2a',
     build: (g, st) => {
