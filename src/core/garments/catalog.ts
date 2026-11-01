@@ -15,6 +15,7 @@ import {
 import { along, card, cord, ellipsoid, frameOf, hullRing, loftRings, merge, orientOutward, roundedBox, solidBand, v3, type Plane } from './ring';
 import { buildShell } from './shell';
 import { featherTexture, makePattern, palette, type Pattern } from './textures';
+import { roundGlasses } from './round-glasses';
 import { HEELS } from './heels';
 import { WRIST } from './wrist';
 import { YORUBA } from './yoruba';
@@ -647,6 +648,11 @@ export const GARMENTS: GarmentDef[] = [
         ...(chest ? [{ mesh: chest, material: mat('Neon B', null, { color: st.color2, emissive: st.color2, roughness: 0.3 }) }] : []),
       ];
     },
+  },
+  {
+    id: 'round_glasses', label: 'Round glasses', slot: 'acc',
+    patterns: ['solid'], color: '#48352c', color2: '#c7a47a',
+    build: roundGlasses,
   },
   {
     id: 'goggles', label: 'Goggles (on forehead)', slot: 'acc', patterns: ['leather'], color: '#2e2116', color2: '#000000',
