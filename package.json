@@ -27,7 +27,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && npm run test:curated && vite build && tsx scripts/build-docs.ts",
+    "build": "tsc --noEmit && npm run test:curated && npm run test:finch && vite build && tsx scripts/build-docs.ts",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "export": "tsx scripts/export-cli.ts",
@@ -38,7 +38,8 @@
     "build-mocap": "tsx scripts/build-mocap.ts",
     "test:ui": "tsx scripts/ui-check.ts",
     "prebuild": "npm run setup-assets -- --skip-mocap",
-    "test:curated": "tsx scripts/gtd-curated90-check.ts"
+    "test:curated": "tsx scripts/gtd-curated90-check.ts",
+    "test:finch": "tsx scripts/gtd-finch-glb-check.ts"
   },
   "dependencies": {
     "fflate": "^0.8.3",
