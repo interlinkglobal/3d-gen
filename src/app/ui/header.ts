@@ -12,7 +12,8 @@ export function header(ctx: Ctx): void {
     const name = presetSel.value;
     if (!name) return;
     presetSel.value = '';
-    store.replaceAll({ ...DEFAULT_PARAMS, ...PRESETS[name], name, detail: store.params.detail });
+    store.replaceAll({ ...DEFAULT_PARAMS, ...PRESETS[name], name, detail: name === 'Finch' ? 'medium' : store.params.detail });
+    if (name === 'Finch') store.setExport({ mode: 'animated', format: 'glb', packaging: 'embedded', clips: ['idle', 'talk', 'sit_idle'] });
   });
 
   const nameInput = $<HTMLInputElement>('#name');
