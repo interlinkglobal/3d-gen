@@ -12,13 +12,14 @@ function requireTrue(ok: unknown, msg: string): asserts ok {
 const preset = PRESETS.Reese;
 requireTrue(!!preset, 'Reese preset missing');
 requireTrue(preset.top === 'tailored_overcoat', 'canonical overcoat not selected');
+requireTrue(preset.shoes === 'shoes03', 'Reese must use Shoes 03');
 requireTrue(garmentById.has('tailored_overcoat'), 'overcoat generator not registered');
 requireTrue(CLIPS.length >= 70, 'animation catalog unexpectedly reduced');
 const lib = await nodeLibrary();
 const p = { ...DEFAULT_PARAMS, ...preset, name: 'Reese', detail: 'medium' as const };
 const reese = await buildHuman(lib, p);
 const materials = reese.mesh.materials.map((m) => m.name);
-for (const material of ['Dress shirt', 'Tailored overcoat', 'Overcoat long split hem', 'Overcoat notch lapels'])
+for (const material of ['Dress shirt', 'Dress shirt collar', 'Tailored overcoat', 'Overcoat long split hem', 'Overcoat notch lapels', 'Overcoat front facing', 'Overcoat buttons'])
   requireTrue(materials.includes(material), 'missing clothing material: ' + material);
 requireTrue(!!reese.rig && reese.rig.bones.length >= 60, 'full game rig missing');
 for (const x of reese.mesh.positions) requireTrue(Number.isFinite(x), 'nonfinite mesh coordinate');
