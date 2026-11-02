@@ -349,7 +349,7 @@ export const PRESETS: Record<string, Partial<HumanParams>> = {
       tailored_overcoat: { pattern: 'solid', color: '#17191d', color2: '#f0f1ef' },
       uniform_trousers: { pattern: 'solid', color: '#17191d' },
     },
-    shoes: 'shoes02',
+    shoes: 'shoes03',
     accessories: [],
     detail: 'medium',
     rig: 'game',
